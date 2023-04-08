@@ -8,13 +8,13 @@ const SearchForm = () => {
         Search Icon
       </form>
 
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="cat-breeds" data-bs-toggle="dropdown" aria-expanded="false">
+      <div className="dropdown">
+        <button className="btn btn-secondary dropdown-toggle" type="button" id="cat-breeds" data-bs-toggle="dropdown" aria-expanded="false">
           Breeds
         </button>
-        <ul class="dropdown-menu" aria-labelledby="cat-breeds">
+        <ul className="dropdown-menu" aria-labelledby="cat-breeds">
           {["breed1", "breed2"].map(item => (
-            <li key={item} class="dropdown-item">{item}</li>
+            <li key={item} className="dropdown-item">{item}</li>
           ))}
         </ul>
       </div>

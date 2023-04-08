@@ -3,6 +3,7 @@ import React from 'react'
 import { images } from '../../utils'
 import BreedSearchForm from '../CatBreed/SearchForm'
 import BreedShowPage from '../CatBreed/ShowPage'
+import CatInfo from '../Info'
 import "./main.css"
 
 const index = () => {
@@ -21,10 +22,12 @@ const index = () => {
           {/* breed search  */}
           <BreedSearchForm />
         </div>
-        {/* breed info content  */}
+        {/* breed info section  */}
         <BreedShowPage />
       </div>
 
+      {/* cat info section  */}
+      <CatInfo />
     </main>
   )
 }
