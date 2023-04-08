@@ -1,6 +1,20 @@
 .main__front {
-  height: 80vh;
 
-  background: url("../../assets/HeroImagelg.png") center center /cover no-repeat;
+  background: url("../../assets/HeroImagelg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--white);
+}
+
+@media screen and (max-width:50rem) {
+  .main__front {
+    background-image: url("../../assets/HeroImagemd.png")
+  }
+}
+
+@media screen and (max-width:25rem) {
+  .main__front {
+    background-image: url("../../assets/HeroImagesm.png")
+  }
 }

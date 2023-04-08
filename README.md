@@ -36,7 +36,7 @@
 ### Built With
 
 - [React](https://reactjs.org/)
--
+- Bootstrap
 
 ## Features
 
@@ -61,6 +61,9 @@ $ npm start
 
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Node.js](https://nodejs.org/)
+- react-router-dom
+- react-icons
+- [cat api](https://developers.thecatapi.com/)
 
 ## Contact
 
