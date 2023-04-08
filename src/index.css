@@ -89,3 +89,14 @@ h2 {
 section {
   min-height: 60vh;
 }
+
+header,
+main,
+footer {
+  padding: 0 var(--padding-x);
+}
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

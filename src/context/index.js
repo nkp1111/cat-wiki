@@ -13,17 +13,15 @@ const AppProvider = ({ children }) => {
   const [catBreedImages, setCatBreedImages] = useState([]);
 
   const fetchAllbreeds = () => {
+    // get all breeds 
     const breedUrl = catapiBaseUrl + "breeds"
     fetch(breedUrl).then(res => res.json()).then(data => setBreeds(data))
   }
 
   useEffect(() => {
     fetchAllbreeds()
-  }, []);
-
-  useEffect(() => {
     setTopCatBreedsName(topBreedsName)
-  }, [])
+  }, []);
 
   useEffect(() => {
     let images = []

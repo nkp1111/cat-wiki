@@ -11,9 +11,11 @@ const FirstPage = () => {
       <div className="d-flex flex-column">
         {/* front page content */}
         <div className="main__front">
-          <div className="d-flex">
+          <div className="d-flex align-items-center">
             <h1 className='main__heading'>CatWiki</h1>
-            <img src={images.catWhite} alt="cat" />
+            <div>
+              <img src={images.catWhite} alt="cat" />
+            </div>
           </div>
           <p>
             Get to know more about your cat breed

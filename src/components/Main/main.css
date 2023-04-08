@@ -1,10 +1,35 @@
+/* front page  */
 .main__front {
-
   background: url("../../assets/HeroImagelg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   color: var(--white);
+
+  padding: 6vw;
+  border-radius: 3rem 3rem 0 0;
+  padding-right: 50%;
+}
+
+/* h1  */
+.main__heading {
+  font-family: var(--mystery-font), Arial, Helvetica, sans-serif;
+}
+
+/* cat image  */
+.main__heading+div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.main__heading+div img {
+  width: 15rem;
+}
+
+.main__front>p {
+  width: 50%;
 }
 
 @media screen and (max-width:50rem) {
