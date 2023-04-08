@@ -1,4 +1,5 @@
 import React from 'react'
+import { SlMagnifier } from 'react-icons/sl'
 
 import useGlobalContext from '../../context'
 
@@ -7,9 +8,11 @@ const SearchForm = () => {
 
   return (
     <div className='main__form-breed'>
-      <form className='d-flex'>
+      <form className='d-flex align-items-center'>
         <input type="text" placeholder='Enter your breed' />
-        Search Icon
+        <div className="icon-holder">
+          <SlMagnifier />
+        </div>
       </form>
 
       <div className="dropdown">

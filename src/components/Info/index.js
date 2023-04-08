@@ -1,4 +1,5 @@
 import React from 'react'
+import { CgArrowLongRight } from 'react-icons/cg'
 
 import ImageGrid from './ImageGrid'
 
@@ -12,7 +13,7 @@ const index = () => {
             <p>
               Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves
             </p>
-            <a href="">READ MORE</a>
+            <a href="" className='d-flex align-items-center'>READ MORE <CgArrowLongRight className='ms-2 long-arrow-icon' /></a>
           </div>
           <div className="col-md-6">
             <ImageGrid />

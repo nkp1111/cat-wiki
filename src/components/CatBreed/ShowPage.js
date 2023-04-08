@@ -1,4 +1,5 @@
 import React from 'react'
+import { CgArrowLongRight } from 'react-icons/cg'
 
 import useGlobalContext from '../../context'
 import { orderCatImages } from '../../utils'
@@ -13,7 +14,7 @@ const ShowPage = () => {
       <h2 className='section-heading'>Most Searched Breeds</h2>
       <div className="d-flex">
         <p>66+ Breeds For you to discover</p>
-        <a href="#" className='ms-auto'>SEE MORE</a>
+        <a href="#" className='ms-auto d-flex align-items-center'>SEE MORE <CgArrowLongRight className='ms-2 long-arrow-icon' /></a>
       </div>
 
       <div className="container">
