@@ -1,11 +1,16 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
+import { getCatImages, topBreedsName } from '../utils'
+
 const AppContext = createContext()
+
+const catapiBaseUrl = "https://api.thecatapi.com/v1/"
 
 const AppProvider = ({ children }) => {
 
   const [breeds, setBreeds] = useState([]);
-  const catapiBaseUrl = "https://api.thecatapi.com/v1/"
+  const [topCatBreedsName, setTopCatBreedsName] = useState([]);
+  const [catBreedImages, setCatBreedImages] = useState([]);
 
   const fetchAllbreeds = () => {
     const breedUrl = catapiBaseUrl + "breeds"
@@ -16,11 +21,27 @@ const AppProvider = ({ children }) => {
     fetchAllbreeds()
   }, []);
 
-  console.log(breeds)
+  useEffect(() => {
+    setTopCatBreedsName(topBreedsName)
+  }, [])
+
+  useEffect(() => {
+    let images = []
+    topBreedsName.map(breed => {
+      getCatImages(breed.id).then(res => {
+        images.push(res)
+      })
+    })
+    setCatBreedImages(images)
+  }, [topBreedsName]);
+
+  // console.log(catBreedImages)
   return (
     <AppContext.Provider
       value={{
-        breeds
+        breeds,
+        topCatBreedsName,
+        catBreedImages,
       }}
     >
       {children}

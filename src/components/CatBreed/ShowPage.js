@@ -1,6 +1,13 @@
 import React from 'react'
 
+import useGlobalContext from '../../context'
+import { orderCatImages } from '../../utils'
+
 const ShowPage = () => {
+
+  const { topCatBreedsName, catBreedImages } = useGlobalContext()
+  const catImages = orderCatImages(catBreedImages)
+
   return (
     <section className='main__section-breed'>
       <h2 className='section-heading'>Most Searched Breeds</h2>
@@ -11,10 +18,15 @@ const ShowPage = () => {
 
       <div className="container">
         <div className="row">
-          {["cat1", "cat2"].map((item, ind) => (
-            <div className="col-sm-6 col-md-3" key={ind}>
+          {topCatBreedsName?.map((breed, ind) => (
+            <div className="col-sm-6 col-md-3" key={breed.id}>
               <div className="card">
-                {item}
+                {catImages.length !== 0 && (
+                  <div className="img-holder">
+                    <img src={catImages[ind]} alt={breed.name} />
+                  </div>
+                )}
+                <p>{breed.name}</p>
               </div>
             </div>
           ))}
