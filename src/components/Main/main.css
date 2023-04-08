@@ -1,0 +1,6 @@
+.main__front {
+  height: 80vh;
+
+  background: url("../../assets/HeroImagelg.png") center center /cover no-repeat;
+  color: var(--white);
+}
