@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ImageGrid from './ImageGrid'
+
 const index = () => {
   return (
     <section className='main__section-info'>
@@ -11,13 +12,13 @@ const index = () => {
             <p>
               Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves
             </p>
+            <a href="">READ MORE</a>
           </div>
           <div className="col-md-6">
             <ImageGrid />
           </div>
         </div>
       </div>
-
     </section >
   )
 }
