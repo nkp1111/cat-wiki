@@ -1,5 +1,6 @@
 import React from 'react'
 import { SlMagnifier } from 'react-icons/sl'
+import { Link } from 'react-router-dom'
 
 import useGlobalContext from '../../context'
 
@@ -21,7 +22,9 @@ const SearchForm = () => {
         </button>
         <ul className="dropdown-menu" aria-labelledby="cat-breeds">
           {breeds.map(breed => (
-            <li key={breed.id} className="dropdown-item">{breed.name}</li>
+            <li key={breed.id} className="dropdown-item">
+              <Link to={`/${breed.id}`}>{breed.name}</Link>
+            </li>
           ))}
         </ul>
       </div>
