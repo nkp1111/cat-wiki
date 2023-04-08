@@ -1,6 +1,6 @@
 import React from 'react'
 
-const index = () => {
+const SearchForm = () => {
   return (
     <div className='main__form-breed'>
       <form className='d-flex'>
@@ -14,7 +14,7 @@ const index = () => {
         </button>
         <ul class="dropdown-menu" aria-labelledby="cat-breeds">
           {["breed1", "breed2"].map(item => (
-            <li key={item}><a class="dropdown-item" href="#">{item}</a></li>
+            <li key={item} class="dropdown-item">{item}</li>
           ))}
         </ul>
       </div>
@@ -23,4 +23,4 @@ const index = () => {
   )
 }
 
-export default index
+export default SearchForm
