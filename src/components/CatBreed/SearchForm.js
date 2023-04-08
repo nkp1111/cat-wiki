@@ -1,6 +1,10 @@
 import React from 'react'
 
+import useGlobalContext from '../../context'
+
 const SearchForm = () => {
+  const { breeds } = useGlobalContext()
+
   return (
     <div className='main__form-breed'>
       <form className='d-flex'>
@@ -13,8 +17,8 @@ const SearchForm = () => {
           Breeds
         </button>
         <ul className="dropdown-menu" aria-labelledby="cat-breeds">
-          {["breed1", "breed2"].map(item => (
-            <li key={item} className="dropdown-item">{item}</li>
+          {breeds.map(breed => (
+            <li key={breed.id} className="dropdown-item">{breed.name}</li>
           ))}
         </ul>
       </div>
