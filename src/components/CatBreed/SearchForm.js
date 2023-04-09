@@ -1,26 +1,36 @@
 import React, { useRef, useEffect } from 'react'
-import { SlMagnifier } from 'react-icons/sl'
+import { SlMagnifier, SlClose } from 'react-icons/sl'
 import { Link } from 'react-router-dom'
 
 import useGlobalContext from '../../context'
+import { handleBreedDropdown } from '../../utils'
 import './searchForm.css'
 
 const SearchForm = () => {
   const { breeds } = useGlobalContext()
   const inputRef = useRef()
+  const closeBtnRef = useRef()
 
   useEffect(() => {
-    const breedItem = document.querySelector(".dropdown-menu")
-    inputRef.current.addEventListener("change", (e) => {
-      if (!breedItem.classList.contains("show")) {
-        breedItem.classList.add("show")
-      }
-    })
-    inputRef.current.addEventListener("click", (e) => {
-      if (!breedItem.classList.contains("show")) {
-        breedItem.classList.add("show")
-      }
-    })
+    // show all breed items in the dropdown menu
+    const inputBar = inputRef.current
+    inputBar.addEventListener("change", (e) => handleBreedDropdown())
+    inputBar.addEventListener("click", (e) => handleBreedDropdown())
+
+    return () => {
+      inputBar.removeEventListener("change", (e) => handleBreedDropdown())
+      inputBar.removeEventListener("click", (e) => handleBreedDropdown())
+    }
+  });
+
+  useEffect(() => {
+    // hide all dropdown menus
+    const closeBtn = closeBtnRef.current
+    closeBtn.addEventListener("click", () => handleBreedDropdown("hide"))
+
+    return () => {
+      closeBtn.removeEventListener("click", () => handleBreedDropdown("hide"))
+    }
   });
 
   return (
@@ -37,6 +47,10 @@ const SearchForm = () => {
           Breeds
         </button>
         <ul className="dropdown-menu" aria-labelledby="cat-breeds">
+          <button className='close-btn' aria-labelledby='close-button'
+            ref={closeBtnRef}>
+            <SlClose />
+          </button>
           {breeds.map(breed => (
             <li key={breed.id} className="dropdown-item">
               <Link to={`/${breed.id}`}>{breed.name}</Link>

@@ -3,3 +3,4 @@ export { default as topBreedsName } from "./constants/topBreed"
 
 export { default as getCatImages } from "./helpers/getCatImages"
 export { default as orderCatImages } from "./helpers/orderCatImages"
+export { default as handleBreedDropdown } from "./helpers/catBreedDropdown"
