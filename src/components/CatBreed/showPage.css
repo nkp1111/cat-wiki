@@ -1,7 +1,7 @@
 .main__section-breed {
   background-color: var(--very-light-yellow);
 
-  border-radius: 0 0 3rem 3rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   padding: var(--padding-x);
 }
 

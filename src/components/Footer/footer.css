@@ -1,0 +1,15 @@
+footer>div {
+  background: var(--black);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+  padding: 2rem var(--padding-x);
+  color: var(--white);
+
+}
+
+footer a {
+  margin-right: auto;
+
+  font-weight: 700;
+  text-decoration: underline;
+}

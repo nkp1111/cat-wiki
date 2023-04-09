@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { images } from '../../utils'
+import "./footer.css"
 
 const index = () => {
   return (
@@ -13,7 +14,7 @@ const index = () => {
           </div>
         </Link>
         <div className="footer__info">
-          &copy; created by <a href="https://github.com/nkp1111">Neeraj Parmar</a> - devChallenge.io 2021
+          &copy; created by <a href="https://github.com/nkp1111" target='_blank' rel="noreferrer">Neeraj Parmar</a> - devChallenge.io 2021
         </div>
       </div>
     </footer>

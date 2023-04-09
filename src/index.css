@@ -50,6 +50,7 @@ h6 {
 :root {
   --mystery-font: 'Mystery Quest', cursive;
   --padding-x: 5vw;
+  --border-radius: 3rem;
 
   --very-light-brown: #544439;
   --light-brown: #4D270C;
