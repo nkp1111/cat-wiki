@@ -8,8 +8,7 @@ const index = () => {
     <footer className='footer'>
       <div className="d-flex align-items-center">
         <Link to="/">
-          <div className="footer__logo d-flex align-items-center">
-            <p>CatWiki</p>
+          <div className="footer__logo">
             <img src={images.catWhite} alt="cat-logo" />
           </div>
         </Link>

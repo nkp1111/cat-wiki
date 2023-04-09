@@ -12,9 +12,9 @@ const FirstPage = () => {
         {/* front page content */}
         <div className="main__front">
           <div className="d-flex align-items-center">
-            <h1 className='main__heading'>CatWiki</h1>
+            <h1 className='main__heading visually-hidden'>CatWiki</h1>
             <div>
-              <img src={images.catWhite} alt="cat" />
+              <img src={images.catWhite} alt="catWiki-logo" />
             </div>
           </div>
           <p>
