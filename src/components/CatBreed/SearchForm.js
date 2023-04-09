@@ -65,7 +65,7 @@ const SearchForm = () => {
 
       <div className="dropdown">
         <button className="btn dropdown-toggle" type="button" id="cat-breeds" data-bs-toggle="dropdown" aria-expanded="false">
-          Breeds
+          Cat Breeds
         </button>
         <ul className="dropdown-menu" aria-labelledby="cat-breeds">
           <button className='close-btn' aria-labelledby='close-button'

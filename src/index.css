@@ -70,6 +70,21 @@ body {
   color: var(--brown);
 }
 
+header,
+main,
+footer {
+  padding: 0 var(--padding-x);
+}
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+section {
+  min-height: 60vh;
+}
+
 h1,
 h2,
 h3,
@@ -87,24 +102,29 @@ h2 {
   font-size: 2.5rem;
 }
 
-section {
-  min-height: 60vh;
+.section-heading {
+  position: relative;
+
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-header,
-main,
-footer {
-  padding: 0 var(--padding-x);
-}
+.section-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  border-radius: 0.5rem;
 
-header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  background-color: var(--brown);
 }
 
 a {
   font-weight: 500;
   color: inherit;
+
+  text-decoration: none;
 }
 
 a:hover {
