@@ -1,15 +1,16 @@
 import React, { useRef, useEffect } from 'react'
 import { SlMagnifier, SlClose } from 'react-icons/sl'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import useGlobalContext from '../../context'
-import { handleBreedDropdown } from '../../utils'
+import { handleBreedDropdown, filterDropdown } from '../../utils'
 import './searchForm.css'
 
 const SearchForm = () => {
   const { breeds } = useGlobalContext()
   const inputRef = useRef()
   const closeBtnRef = useRef()
+  const detailCatPageNav = useNavigate()
 
   useEffect(() => {
     // show all breed items in the dropdown menu
@@ -33,9 +34,29 @@ const SearchForm = () => {
     }
   });
 
+  useEffect(() => {
+    // filter breeds to get required breed
+    const inputBar = inputRef.current
+    inputBar.addEventListener("input", (e) => filterDropdown(inputBar.value))
+
+    return () => {
+      inputBar.removeEventListener("input", (e) => filterDropdown(inputBar.value))
+    }
+  })
+
+  const navigateCatDetail = (e) => {
+    // navigate to cat detail page on form submit 
+    e.preventDefault()
+    let breedId = filterDropdown(inputRef.current.value)
+    console.log(breedId)
+    if (breedId) {
+      detailCatPageNav(`/${breedId}`)
+    }
+  }
+
   return (
     <div className='main__form-breed'>
-      <form className='d-flex align-items-center'>
+      <form className='d-flex align-items-center' onSubmit={(e) => navigateCatDetail(e)}>
         <input type="text" placeholder='Enter your breed' ref={inputRef} />
         <div className="icon-holder d-flex align-items-center justify-content-center">
           <SlMagnifier />
@@ -52,7 +73,7 @@ const SearchForm = () => {
             <SlClose />
           </button>
           {breeds.map(breed => (
-            <li key={breed.id} className="dropdown-item">
+            <li key={breed.id} className={`dropdown-item ${breed.id}`}>
               <Link to={`/${breed.id}`}>{breed.name}</Link>
             </li>
           ))}
