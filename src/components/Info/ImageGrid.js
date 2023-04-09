@@ -6,8 +6,8 @@ const { image1, image2, image3 } = images
 const ImageGrid = () => {
   return (
     <div className='info-grid'>
-      <div className="d-flex gap-3">
-        <div className="d-flex flex-column align-items-end gap-3">
+      <div className="d-flex gap-4">
+        <div className="d-flex flex-column align-items-end gap-4">
           <div className='img-holder-1'>
             <img src={image2} alt="cat" />
           </div>

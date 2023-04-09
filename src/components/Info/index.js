@@ -2,13 +2,14 @@ import React from 'react'
 import { CgArrowLongRight } from 'react-icons/cg'
 
 import ImageGrid from './ImageGrid'
+import "./info.css"
 
 const index = () => {
   return (
     <section className='main__section-info'>
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 info-text">
             <h2 className='section-heading'>Why should you have a cat?</h2>
             <p>
               Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves

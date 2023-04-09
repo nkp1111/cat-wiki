@@ -1,0 +1,28 @@
+.main__section-info {
+  padding: var(--padding-x);
+}
+
+.info-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* h2 line style  */
+.main__section-info .section-heading::after {
+  top: -0.5rem;
+}
+
+.main__section-info .section-heading+p {
+  margin: 3rem 0;
+}
+
+.main__section-info a {
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+/* image grid  */
+.img-holder-3 {
+  margin-left: 2.5rem;
+}
