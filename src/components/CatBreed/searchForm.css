@@ -80,10 +80,6 @@ input:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-menu a {
-  text-decoration: none;
-}
-
 .dropdown .close-btn {
   border: none;
   border-radius: 50%;
