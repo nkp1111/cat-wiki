@@ -16,16 +16,18 @@ const ShowPage = () => {
       <h2 className='section-heading'>Most Searched Breeds</h2>
       <div className="d-flex heading-div">
         <p>66+ Breeds For you to discover</p>
-        <a href="#" className='ms-auto d-flex align-items-center'>SEE MORE
+        <Link to="/allBreeds"
+          className='ms-auto d-flex align-items-center'>
+          SEE MORE
           <CgArrowLongRight className='ms-2 long-arrow-icon' />
-        </a>
+        </Link>
       </div>
 
       <div className="container">
         <div className="row">
           {topCatBreedsName?.slice(0, 4).map((breed, ind) => (
             <div className="col-sm-6 col-md-3" key={breed.id}>
-              <Link to={`/${breed.id}`}>
+              <Link to={`/cat/${breed.id}`}>
                 <div className="card">
                   {catImages.length !== 0 && (
                     <figure className={`${ind === 0 ? "card-back" : ""}`}>

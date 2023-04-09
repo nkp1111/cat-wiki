@@ -50,7 +50,7 @@ const SearchForm = () => {
     let breedId = filterDropdown(inputRef.current.value)
     console.log(breedId)
     if (breedId) {
-      detailCatPageNav(`/${breedId}`)
+      detailCatPageNav(`/cat/${breedId}`)
     }
   }
 
@@ -74,7 +74,7 @@ const SearchForm = () => {
           </button>
           {breeds.map(breed => (
             <li key={breed.id} className={`dropdown-item ${breed.id}`}>
-              <Link to={`/${breed.id}`}>{breed.name}</Link>
+              <Link to={`/cat/${breed.id}`}>{breed.name}</Link>
             </li>
           ))}
         </ul>
