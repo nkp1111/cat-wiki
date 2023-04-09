@@ -18,7 +18,8 @@ const FirstPage = () => {
             </div>
           </div>
           <p>
-            Get to know more about your cat breed
+            Get to know more about your <br />
+            cat breed
           </p>
           {/* breed search  */}
           <BreedSearchForm />

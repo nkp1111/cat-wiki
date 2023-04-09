@@ -10,6 +10,7 @@
   padding: 6vw;
   border-radius: 3rem 3rem 0 0;
   padding-right: 50%;
+  padding-bottom: 20vh;
 }
 
 /* h1  */
@@ -29,7 +30,7 @@
 }
 
 .main__front>p {
-  width: 50%;
+  margin: 1rem 0;
 }
 
 @media screen and (max-width:50rem) {

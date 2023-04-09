@@ -26,13 +26,12 @@ const Index = () => {
     }
   })
 
-  console.log(catImages)
-
   return (
     <>
       <div className="main__detail d-flex">
         {/* front page content */}
         <div className="detail-info order-2">
+          {/* cat breed info  */}
           <h1 className='section-heading'>{detailInfo?.name}</h1>
           <p>{detailInfo?.description}</p>
           {detailToShow.map(item => {
@@ -43,13 +42,14 @@ const Index = () => {
                 : <span>{detailInfo?.[propTerm]}</span>
               </p>
             )
-
           })}
         </div>
+        {/* cat main image  */}
         <div>
           <img src={catImages[0]} alt="cat" />
         </div>
       </div>
+      {/* cat more images  */}
       <section className='more-image'>
         <h2 className='section-heading'>Other photos</h2>
         <div className="container">

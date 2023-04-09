@@ -66,6 +66,7 @@ h6 {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  font-weight: 500;
   color: var(--brown);
 }
 
@@ -99,4 +100,13 @@ footer {
 header {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
 }
