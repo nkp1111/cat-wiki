@@ -59,7 +59,7 @@ const Index = () => {
           })}
         </div>
         {/* cat main image  */}
-        <div>
+        <div className='detail-img-holder'>
           <img src={catImages[0]} alt="cat" />
         </div>
       </div>
@@ -68,7 +68,7 @@ const Index = () => {
         <h2 className='section-heading'>Other photos</h2>
         <div className="container">
           <div className="row">
-            {catImages?.slice(1,).map((item, ind) => (
+            {catImages?.slice(1, 9).map((item, ind) => (
               <div className="col-md-3 col-sm-6" key={ind}>
                 <img src={item} alt={detailInfo?.name} />
               </div>
