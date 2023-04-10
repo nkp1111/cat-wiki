@@ -15,7 +15,13 @@ const AppProvider = ({ children }) => {
   const fetchAllbreeds = () => {
     // get all breeds 
     const breedUrl = catapiBaseUrl + "breeds"
-    fetch(breedUrl).then(res => res.json()).then(data => setBreeds(data))
+    fetch(breedUrl)
+      .then(res => res.json())
+      .then(data => setBreeds(data))
+      .catch(err => {
+        console.log("error while fetching breeds")
+        console.log(err)
+      })
   }
 
   useEffect(() => {

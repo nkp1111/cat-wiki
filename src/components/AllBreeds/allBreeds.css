@@ -1,0 +1,51 @@
+.main__breeds .section-heading {
+  margin: 1rem 0;
+}
+
+.main__breeds .section-heading::after {
+  display: none;
+}
+
+.main__breeds article {
+  margin-bottom: 3rem;
+}
+
+article h2 {
+  font-weight: 600;
+
+  margin-bottom: 1.5rem;
+}
+
+article .img-holder {
+  min-width: 20vw;
+  flex-shrink: 0;
+}
+
+article .img-holder img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+
+  border-radius: 1.5rem;
+}
+
+article .img-holder img:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.main__breed-name .d-flex {
+  flex-wrap: wrap;
+}
+
+.breed-name {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+
+  border-radius: 2rem;
+  background-color: var(--very-light-yellow);
+}
+
+.breed-name:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
