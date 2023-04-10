@@ -38,6 +38,7 @@ const Index = () => {
           {detailToShow.map(item => {
             let propTerm = item.toLowerCase().replace(" ", "_")
             let propValue = detailInfo?.[propTerm]
+
             if (!Number.isInteger(propValue)) {
               // cat detail info 
               return (
@@ -60,7 +61,9 @@ const Index = () => {
         </div>
         {/* cat main image  */}
         <div className='detail-img-holder'>
-          <img src={catImages[0]} alt="cat" />
+          <a href={catImages[0]} target="_blank" rel="noreferrer" download>
+            <img src={catImages[0]} alt="cat" />
+          </a>
         </div>
       </div>
       {/* cat more images  */}
@@ -70,7 +73,9 @@ const Index = () => {
           <div className="row">
             {catImages?.slice(1, 9).map((item, ind) => (
               <div className="col-md-3 col-sm-6" key={ind}>
-                <img src={item} alt={detailInfo?.name} />
+                <a href={item} target="_blank" rel="noreferrer" download>
+                  <img src={item} alt={detailInfo?.name} />
+                </a>
               </div>
             ))}
           </div>

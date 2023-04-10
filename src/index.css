@@ -131,3 +131,22 @@ a {
 a:hover {
   color: inherit;
 }
+
+/* read more and see more links  */
+.all-breed-link {
+  white-space: nowrap;
+
+  font-weight: 700;
+  color: var(--dark-brown);
+  text-decoration: none;
+
+  transition: 0.3s all linear;
+}
+
+.all-breed-link:hover {
+  color: var(--very-light-brown);
+}
+
+.long-arrow-icon {
+  width: 2rem;
+}

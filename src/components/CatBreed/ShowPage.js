@@ -17,7 +17,7 @@ const ShowPage = () => {
       <div className="d-flex heading-div">
         <p>66+ Breeds For you to discover</p>
         <Link to="/allBreeds"
-          className='ms-auto d-flex align-items-center'>
+          className='all-breed-link ms-auto d-flex align-items-center'>
           SEE MORE
           <CgArrowLongRight className='ms-2 long-arrow-icon' />
         </Link>
