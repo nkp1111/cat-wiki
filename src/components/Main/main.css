@@ -30,17 +30,35 @@
 }
 
 .main__front>p {
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
 }
 
-@media screen and (max-width:50rem) {
+@media screen and (max-width:48rem) {
+
+  /* 768 px  */
   .main__front {
-    background-image: url("../../assets/HeroImagemd.png")
+    background-image: url("../../assets/HeroImagemd.png");
+
+    padding-right: 50%;
+  }
+
+  .main__front>p br {
+    display: none;
   }
 }
 
-@media screen and (max-width:25rem) {
+@media screen and (max-width:31.25rem) {
   .main__front {
-    background-image: url("../../assets/HeroImagesm.png")
+    padding-right: 35%;
+  }
+}
+
+@media screen and (max-width:26rem) {
+
+  /* 400px  */
+  .main__front {
+    background-image: url("../../assets/HeroImagesm.png");
+    padding-top: 3rem;
+    padding-right: 30%;
   }
 }

@@ -44,16 +44,16 @@ const Index = () => {
               // cat detail info 
               return (
                 <p key={item} className='d-flex align-items-start'>
-                  <strong>{item} </strong>
-                  : <span className='ms-2'>{propValue}</span>
+                  <strong>{item}: </strong>
+                  <span className='ms-2'>{propValue}</span>
                 </p>
               )
             }
             else {
               // cat detail stat
               return (
-                <p key={item} className='d-flex align-items-center row'>
-                  <strong className="col-3">{item} </strong>
+                <p key={item} className='d-flex align-items-center row stats'>
+                  <strong className="col-sm-3">{item}: </strong>
                   <RatingPlaceholder n={propValue} />
                 </p>
               )

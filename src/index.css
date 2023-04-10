@@ -80,8 +80,8 @@ footer {
 }
 
 header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 section {
@@ -149,4 +149,11 @@ a:hover {
 
 .long-arrow-icon {
   width: 2rem;
+}
+
+@media screen and (max-width:48rem) {
+  :root {
+    --padding-x: 2rem;
+    --border-radius: 2rem;
+  }
 }

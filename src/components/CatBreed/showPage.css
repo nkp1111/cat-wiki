@@ -62,3 +62,13 @@ figure.card-back::before {
   background-color: var(--light-yellow);
   border-radius: 1rem 0 0 1rem;
 }
+
+@media screen and (max-width:48rem) {
+  .main__section-breed .all-breed-link {
+    display: none !important;
+  }
+
+  .card img {
+    object-position: top;
+  }
+}

@@ -26,3 +26,20 @@
 .img-holder-3 {
   margin-left: 2.5rem;
 }
+
+@media screen and (max-width:48rem) {
+  .main__section-info {
+    padding: 0;
+    padding-top: 3rem;
+  }
+
+  .main__section-info .col-md-6 {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media screen and (max-width:26rem) {
+  .main__section-info .section-heading+p {
+    margin: 2rem 0;
+  }
+}

@@ -14,14 +14,22 @@ const Index = () => {
       <h1 className='section-heading'>Top 10 most searched breeds</h1>
       <div className="d-flex flex-column py-3">
         {topCatBreedsName.map((breed, ind) => {
+
+          let description = breeds.find(item => item.id === breed.id)?.description
+
+          let briefDescription = window.innerWidth < 750 && description.length > 200
+            ? description.slice(0, 200) + " ..."
+            : description
+
+
           return (
             <article className='d-flex' key={breed.id}>
-              <div className="content order-2">
+              <div className="content">
                 <h2>
                   <Link to={`/cat/${breed.id}`}>{breed.rank}. {breed.name}</Link>
                 </h2>
                 <p>
-                  {breeds.find(item => item.id === breed.id)?.description}
+                  {briefDescription}
                 </p>
               </div>
               <div className="img-holder">

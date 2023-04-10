@@ -10,6 +10,10 @@
   margin-bottom: 3rem;
 }
 
+article .content {
+  order: 2;
+}
+
 article h2 {
   font-weight: 600;
 
@@ -19,6 +23,8 @@ article h2 {
 article .img-holder {
   min-width: 20vw;
   flex-shrink: 0;
+
+  margin-right: 3rem;
 }
 
 article .img-holder img {
@@ -48,4 +54,27 @@ article .img-holder img:hover {
 
 .breed-name:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:34.375rem) {
+  article {
+    flex-direction: column;
+
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  article .img-holder {
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  article .content {
+    order: 1;
+  }
+
+  article .img-holder {
+    order: 2;
+  }
 }

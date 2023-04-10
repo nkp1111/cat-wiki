@@ -57,7 +57,9 @@ const SearchForm = () => {
   return (
     <div className='main__form-breed'>
       <form className='d-flex align-items-center' onSubmit={(e) => navigateCatDetail(e)}>
-        <input type="text" placeholder='Enter your breed' ref={inputRef} />
+        <input type="text"
+          placeholder={window.innerWidth < 600 ? "Search" : 'Enter your breed'}
+          ref={inputRef} />
         <div className="icon-holder d-flex align-items-center justify-content-center">
           <SlMagnifier />
         </div>
