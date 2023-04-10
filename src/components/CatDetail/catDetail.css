@@ -10,10 +10,12 @@
 
 .main__detail .detail-img-holder {
   min-width: 30vw;
+  width: 55vw;
 }
 
 .main__detail img {
   border-radius: 1rem;
+  width: 100%;
 }
 
 .detail-info {

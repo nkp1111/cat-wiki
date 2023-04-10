@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import useGlobalContext from '../../context'
 import { getCatImages } from '../../utils'
 import RatingPlaceholder from './RatingPlaceholder'
+import Spinner from '../Spinner'
 import "./catDetail.css"
 
 const catImages = []
@@ -61,9 +62,12 @@ const Index = () => {
         </div>
         {/* cat main image  */}
         <div className='detail-img-holder'>
-          <a href={catImages[0]} target="_blank" rel="noreferrer" download>
-            <img src={catImages[0]} alt="cat" />
-          </a>
+          {catImages.length !== 0 && catImages[0].length > 4
+            ? (<a href={catImages[0]} target="_blank" rel="noreferrer" download>
+              <img src={catImages[0]} alt="cat" />
+            </a>)
+            : <Spinner message="Image stuck please wait or refresh..." />}
+
         </div>
       </div>
       {/* cat more images  */}

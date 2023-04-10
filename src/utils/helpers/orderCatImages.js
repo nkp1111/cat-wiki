@@ -6,7 +6,7 @@ const orderCatImages = (images) => {
 
   images?.map(item => {
     if (item[0]) {
-      orderImage[orderImage.indexOf(item[0].breeds[0].id)] = item[0].url
+      orderImage[orderImage.indexOf(item[0]?.breeds[0]?.id)] = item[0].url
     }
   })
 

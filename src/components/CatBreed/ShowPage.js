@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import useGlobalContext from '../../context'
 import { orderCatImages } from '../../utils'
+import Spinner from '../Spinner'
 import "./showPage.css"
 
 const ShowPage = () => {
@@ -29,13 +30,16 @@ const ShowPage = () => {
             <div className="col-sm-6 col-md-3" key={breed.id}>
               <Link to={`/cat/${breed.id}`}>
                 <div className="card">
-                  {catImages.length !== 0 && (
-                    <figure className={`${ind === 0 ? "card-back" : ""}`}>
-                      <img src={catImages[ind]}
-                        alt={breed.name} />
-                      <figcaption>{breed.name}</figcaption>
-                    </figure>
-                  )}
+                  {catImages.length !== 0
+                    ? catImages[ind].length > 4
+                      ? (
+                        <figure className={`${ind === 0 ? "card-back" : ""}`}>
+                          <img src={catImages[ind]}
+                            alt={breed.name} />
+                          <figcaption>{breed.name}</figcaption>
+                        </figure>
+                      ) : <Spinner message="Problem loading image..." />
+                    : <Spinner message="Images are stuck please refresh..." />}
                 </div>
               </Link>
             </div>
