@@ -6,12 +6,12 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
+    <a href="https://cat-wiki-seven.vercel.app/">
+      Live App
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
+    <a href="https://github.com/nkp1111/cat-wiki">
+      GitHub
     </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/f4NJ53rcfgrP6sBMD2jt">
@@ -31,7 +31,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./src/assets/screencapture-localhost-3000-2023-04-10-17_01_21.png)
 
 ### Built With
 
@@ -64,6 +64,7 @@ $ npm start
 - react-router-dom
 - react-icons
 - [cat api](https://developers.thecatapi.com/)
+- react-loader-spinner
 
 ## Contact
 
